@@ -50,6 +50,8 @@ def parse_field(title, link, scope):
 	tags.append(title + '\xcc8\xce' + str(scope) + '\xcf' + strip_tags(cls[start:end]) + '\n')
 
 def parse_method(title, link, scope):
+	if title.startswith('operator '):
+		return
 	with open(os.path.join(sys.argv[1], link)) as dom:
 		cls = dom.read()
 	start = cls.find('<div class="signature-CS sig-block">')

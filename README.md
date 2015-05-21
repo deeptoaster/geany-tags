@@ -18,12 +18,49 @@ a local installation of Unity.
 Installation
 ------------
 
-Copy unity.cs.tags to the Geany tags config directory (usually 
-`~/.config/geany/tags`). The Unity API autocomplete and hinting features will 
-then be available in C# files after a restart of Geany.
+Copy unity.cs.tags to the Geany tags config directory, usually in the following 
+locations:
+
+*   `C:\Users\UserName\Roaming\geany\tags` (Win 7)
+*   `C:\Documents and Settings\UserName\Application Data\geany\tags` (Win XP)
+*   `~/.config/geany/tags` (*nix)
+
+The Unity API autocomplete and hinting features will then be available in C# 
+files after a restart of Geany.
 
 To use the tags immediately, find *Load Tags* under the *Tools* menu and browse 
-to unity.cs.tags.
+to unity.cs.tags. More information can be found at 
+<http://www.geany.org/manual/current/#tags>.
+
+
+Using Geany in Unity
+--------------------
+
+To set Geany as your Unity script editor:
+
+1.  Open *Edit > Preferences...* and switch to the *External Tools* tab.
+
+2.  Click on the **External Script Editor** dropdown and browse to Geany.
+
+3.  Set **External Script Editor Args** to `+$(Line) "$(File)"`.
+
+If you are using Unity through Wine or PlayOnLinux, follow these instructions 
+instead:
+
+1.  Place the following code in a file called geany.sh:
+    
+        #!/bin/sh
+        /usr/bin/geany +$2 "`wine winepath -u "$1"`"
+
+2.  Open *Edit > Preferences...* and switch to the *External Tools* tab.
+
+2.  Click on the **External Script Editor** dropdown and browse to geany.sh 
+    from step 1.
+
+3.  Set **External Script Editor Args** to `"$(File)" $(Line)`.
+
+For more information, see 
+<http://wiki.unity3d.com/index.php/Running_Unity_on_Linux_through_Wine#Editing_scripts_with_a_native_Linux_script_editor>.
 
 
 Generating tags manually

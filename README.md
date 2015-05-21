@@ -9,10 +9,10 @@ About
 
 The unity-tags project provides tag support (keyword autocomplete and function 
 argument hinting) for the Unity Scripting API 
-(<http://docs.unity3d.com/ScriptReference/Vector3-ctor.html>) in the Geany 
-editor (<http://www.geany.org/>). There is a .tags file for use with Unity 5 
-out of the box; in addition, a Python script is provided to generate a .tags 
-file from a local installation of Unity.
+(<http://docs.unity3d.com/ScriptReference/>) in the Geany editor 
+(<http://www.geany.org/>). There is a .tags file for use with Unity 5 out of 
+the box; in addition, a Python script is provided to generate a .tags file from 
+a local installation of Unity.
 
 
 Installation

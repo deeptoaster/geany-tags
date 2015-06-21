@@ -8,7 +8,7 @@ About
 -----
 
 This project provides tag support (keyword autocomplete and parameter hinting) 
-for a variety of APIs and platforms Geany (<http://www.geany.org/>).
+for a variety of APIs and platforms in Geany (<http://www.geany.org/>).
 
 In some cases, scripts are provided to generate tag files from a local 
 installation for additional customization.
@@ -38,3 +38,4 @@ Supported APIs
 
 *   Unity 5 (C#): `unity`
 *   CUDA (C): `cuda`
+*   Android (Java): `android`
